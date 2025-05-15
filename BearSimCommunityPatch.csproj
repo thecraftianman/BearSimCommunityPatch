@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net35</TargetFramework>
     <AssemblyName>BearSimCommunityPatch</AssemblyName>
-    <Product>Bear Simulator mod to fix broken progression.</Product>
-    <Version>1.0.2</Version>
+    <Product>Bear Simulator mod to fix various issues with the game.</Product>
+    <Version>1.0.3</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
