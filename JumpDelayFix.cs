@@ -16,7 +16,7 @@ internal class JumpDelayFix
             // The code appears to set this value to 0.35f by default, but it gets set
             // to 0.7f somehow elsewhere. Lowering this value makes jumping feel a bit
             // more responsive.
-            playerWalker.antiBunnyHopFactor = 0.15f;
+            playerWalker.antiBunnyHopFactor = 0.1f;
         }
     }
 }

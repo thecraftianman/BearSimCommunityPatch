@@ -8,7 +8,7 @@ internal class MainMenuFixes
 {
     [HarmonyPatch(typeof(GUI_StartScreen), "Start")]
     [HarmonyPostfix]
-    private static void Start_Postfix(GUI_StartScreen __instance)
+    private static void Start_Postfix()
     {
         GameObject startScreenManager = GameObject.Find("StartScreenManager");
 
@@ -25,8 +25,9 @@ internal class MainMenuFixes
     {
         if (__instance is GUI_StartScreen startScreen)
         {
-            // Makes the Kickstarter backer code entry usable again
             Transform optionsMenuTransform = startScreen.optionGUI.transform;
+
+            // Makes the Kickstarter backer code entry usable again
             GameObject backerCodeEntry = optionsMenuTransform.GetChild(4).gameObject;
             backerCodeEntry.SetActive(true);
         }

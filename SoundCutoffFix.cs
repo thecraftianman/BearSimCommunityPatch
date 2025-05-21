@@ -65,9 +65,9 @@ internal class SoundCutoffFix
         if (__instance is BearSounds sounds && !dictionariesInitialized)
         {
             // Attack sounds (used by PlayAttacks)
-            attacksDictionary.Add("PSready", new SoundData(sounds.powerSwipeReady, 1f));
+            attacksDictionary.Add("PSready", new SoundData(sounds.powerSwipeReady, 1f, true));
             attacksDictionary.Add("PScharge", new SoundData(sounds.powerSwipeCharge, 1f));
-            attacksDictionary.Add("PSattack", new SoundData(sounds.powerSwipeAttack, 1f));
+            attacksDictionary.Add("PSattack", new SoundData(sounds.powerSwipeAttack, 1f, true));
             attacksDictionary.Add("PScooldown", new SoundData(sounds.powerSwipeCooldown, 1f));
             attacksDictionary.Add("PSrecharged", new SoundData(sounds.powerSwipeRecharged, 1f));
             attacksDictionary.Add("regularSwipe", new SoundData(sounds.regularSwipe, 1f));
