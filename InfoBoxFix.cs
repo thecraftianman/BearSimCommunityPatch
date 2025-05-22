@@ -18,13 +18,30 @@ internal class InfoBoxFix
 
     [HarmonyPatch(typeof(HUDMain), "displaySpecial")]
     [HarmonyPostfix]
-    private static void displaySpecial_Postfix(ref string whatisneeded, HUDMain __instance)
+    private static void DisplaySpecial_Postfix(ref string whatisneeded, HUDMain __instance)
     {
-        if (__instance is HUDMain hud && whatisneeded == "thebeehive")
+        if (__instance is HUDMain hud)
         {
-            // Fixes the beehive displaying an empty secondary option
-            UILabel secondaryButtonLabel = hud.hudInfoButton2Obj.GetComponent<UILabel>();
-            secondaryButtonLabel.text = string.Empty;
+            if (whatisneeded == "thebeehive")
+            {
+                // Fixes the beehive displaying an empty secondary option
+                UILabel secondaryButtonLabel = hud.hudInfoButton2Obj.GetComponent<UILabel>();
+                secondaryButtonLabel.text = string.Empty;
+            }
+
+            if (whatisneeded == "balalala")
+            {
+                // Fixes the button not being listed in the text
+                UILabel primaryButtonLabel = hud.hudInfoButton1Obj.GetComponent<UILabel>();
+                primaryButtonLabel.text = controlScheme.theControls.eKey + "): Play!";
+            }
+
+            if (whatisneeded == "valve")
+            {
+                // Fixes the button not being listed in the text
+                UILabel primaryButtonLabel = hud.hudInfoButton1Obj.GetComponent<UILabel>();
+                primaryButtonLabel.text = controlScheme.theControls.eKey + "): Place Valve";
+            }
         }
     }
 

@@ -30,6 +30,14 @@ internal class MainMenuFixes
             // Makes the Kickstarter backer code entry usable again
             GameObject backerCodeEntry = optionsMenuTransform.GetChild(4).gameObject;
             backerCodeEntry.SetActive(true);
+
+            /*
+            // Moves the help button to a slightly better spot in the menu
+            // TODO: Figure out why this doesn't work as expected
+            Transform helpButtonTransform = optionsMenuTransform.GetChild(1);
+            helpButtonTransform.gameObject.SetActive(true);
+            helpButtonTransform.localPosition = new Vector3(0, -482, 0);
+            */
         }
     }
 }

@@ -14,7 +14,11 @@ internal class GraphicsImprovements
         if (QualitySettings.GetQualityLevel() >= 2)
         {
             Terrain terrain = GameObject.Find("Terrain").GetComponent<Terrain>();
-            terrain.detailObjectDistance = 125; // Reduce detail object pop-in (original value is 50)
+
+            if (terrain != null)
+            {
+                terrain.detailObjectDistance = 150; // Reduce detail object pop-in (original value is 50)
+            }
         }
     }
 }
